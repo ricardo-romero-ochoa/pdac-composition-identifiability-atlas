@@ -177,7 +177,7 @@ See [`DATA_SOURCES.md`](DATA_SOURCES.md) for accession numbers, external-resourc
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). When this release is archived in Zenodo or another DOI-minting repository, please cite both the associated article and the archived software/data release.
+The archived v1.0.0 release is available from Zenodo at **https://doi.org/10.5281/zenodo.22759989**. Citation metadata are also provided in [`CITATION.cff`](CITATION.cff). Please cite both the archived software/data release and the associated article when appropriate.
 
 ## License
 
