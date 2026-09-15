@@ -4,6 +4,9 @@ title: "Composition identifiability in public PDAC transcriptomics: reproducible
 type: software
 version: 1.0.0
 date-released: 2026-09-14
+doi: 10.5281/zenodo.22759989
+repository-code: "https://github.com/ricardo-romero-ochoa/pdac-composition-identifiability-atlas"
+url: "https://doi.org/10.5281/zenodo.22759989"
 authors:
   - family-names: Romero
     given-names: Ricardo
