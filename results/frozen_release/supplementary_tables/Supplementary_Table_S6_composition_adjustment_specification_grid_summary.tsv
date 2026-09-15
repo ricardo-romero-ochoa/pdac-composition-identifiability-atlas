@@ -1,0 +1,6 @@
+tme_spec	covariates_requested	interpretation	n_genes	n_unadjusted_meta_significant	n_retained_under_spec	n_attenuated_ge_075	median_attenuation	retained_fold_vs_S1
+S0		unadjusted_reference	28292	10945	10945	0	0.0	4.59295006294587
+S1	stromal_caf;immune_pan	stromal_immune_only_no_epithelial_proxies	28292	10945	2383	3206	0.61319551364022	1.0
+S2	stromal_caf;immune_pan;endothelial	stromal_immune_endothelial_no_epithelial_proxies	28292	10945	586	4448	0.699243489424483	0.24590851867394
+S3	COMPOSITION_PC1_NON_EPITHELIAL	single_non_epithelial_composition_scalar	28292	10945	6582	667	0.333621831207944	2.762064624423
+S4	stromal_caf;immune_pan;ductal_epithelial;acinar_pancreas	historical_over_adjusted_negative_control_with_epithelial_acinar_proxies	28292	10945	48	5843	0.766437897100183	0.0201426772975241

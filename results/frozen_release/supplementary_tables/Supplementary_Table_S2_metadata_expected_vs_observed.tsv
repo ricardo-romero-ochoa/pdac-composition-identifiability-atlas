@@ -1,0 +1,16 @@
+dataset	condition	expected_n	observed_n	delta	status
+GSE15471	control	39	39	0	ok
+GSE15471	tumor	39	39	0	ok
+GSE16515	control	16	16	0	ok
+GSE16515	tumor	36	36	0	ok
+GSE28735	control	45	45	0	ok
+GSE28735	tumor	45	45	0	ok
+GSE62165	control	13	13	0	ok
+GSE62165	tumor	118	118	0	ok
+GSE71989	control	8	8	0	ok
+GSE71989	tumor	13	13	0	ok
+GSE71989	unlabeled	0	1	1	review_unlabeled_samples
+GSE91035	benign	15	15	0	ok
+GSE91035	control	8	8	0	ok
+GSE91035	cp	2	2	0	ok
+GSE91035	tumor	25	25	0	ok

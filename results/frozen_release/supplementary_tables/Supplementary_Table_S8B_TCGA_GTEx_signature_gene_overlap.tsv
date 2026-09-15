@@ -1,0 +1,7 @@
+module	n_defined	n_up_defined	n_down_defined	n_available	n_up_available	n_down_available	available_fraction	source_file
+tier1_core	100	73	27	100	73	27	1	results/tables/program_tier1_core_signature.tsv
+tumor_associated_retained	50	23	27	36	21	15	0.72	results/tables/program_tumor_intrinsic_retained_signature.tsv
+composition_covarying	100	52	48	72	42	30	0.72	results/tables/program_composition_covarying_signature.tsv
+transition_up	1241	1241	0	1231	1231	0	0.991941982272361	results/tables/program_benign_to_pdac_transition_coding_symbol_proxy.tsv
+transition_down	719	719	0	715	715	0	0.9944367176634215	results/tables/program_benign_to_pdac_transition_coding_symbol_proxy.tsv
+transition_composite	1960	1241	719	1946	1231	715	0.9928571428571429	results/tables/program_benign_to_pdac_transition_coding_symbol_proxy.tsv

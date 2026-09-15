@@ -1,0 +1,59 @@
+Package: pdacTranscriptomicAtlas
+Type: Project
+Title: Composition Identifiability in Public PDAC Transcriptomics
+Version: 1.0.0
+Authors@R: c(person("Ricardo", "Romero", role = c("aut", "cre")))
+Description: Reproducible cross-cohort re-analysis of public pancreatic ductal adenocarcinoma transcriptomic datasets, with explicit metadata audit, random-effects meta-analysis, composition-sensitivity analysis, TCGA/GTEx validation, single-cell localization, pan-cancer specificity testing, PurIST subtyping, and CIBERSORTx reference-based validation.
+License: MIT
+Encoding: UTF-8
+Depends: R (>= 4.3.0)
+Imports:
+    GEOquery,
+    Biobase,
+    limma,
+    metafor,
+    tidyverse,
+    data.table,
+    yaml,
+    janitor,
+    AnnotationDbi,
+    org.Hs.eg.db,
+    msigdbr,
+    GSVA,
+    pheatmap,
+    ComplexHeatmap,
+    ggplot2,
+    scales,
+    ggrepel,
+    cowplot,
+    patchwork,
+    RColorBrewer,
+    WGCNA,
+    uwot,
+    matrixStats,
+    circlize,
+    httr2,
+    jsonlite,
+    rmarkdown,
+    knitr,
+    targets,
+    tarchetypes,
+    survival,
+    SummarizedExperiment,
+    SingleCellExperiment,
+    zellkonverter
+Suggests:
+    hgu133plus2.db,
+    hugene10sttranscriptcluster.db,
+    pd.hugene.1.0.st.v1,
+    progeny,
+    dorothea,
+    viper,
+    xCell,
+    immunedeconv,
+    STRINGdb,
+    testthat,
+    Seurat,
+    SeuratObject,
+    UCSCXenaTools,
+    TCGAbiolinks

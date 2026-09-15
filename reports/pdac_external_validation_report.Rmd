@@ -1,0 +1,167 @@
+---
+title: "External validation of the cross-cohort PDAC transcriptomic atlas"
+subtitle: "v3.14 composition-identifiability audit, external reinforcement, scRNA mapping, and conservative annotation"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+root <- normalizePath(".", mustWork = TRUE)
+read_tsv_if <- function(path) if (file.exists(path)) readr::read_tsv(path, show_col_types = FALSE) else tibble::tibble(status = "missing", file = path)
+knitr::opts_knit$set(root.dir = root)
+```
+
+# Purpose
+
+This report summarizes the external reinforcement analyses after the v3.14 methodological correction. The main interpretation is now composition-identifiability rather than target discovery: tumor-versus-control bulk signatures are evaluated for reproducibility, TCGA/GTEx reinforcement, survival association, single-cell compartment localization, within-tumor deconvolution covariation, and conservative DepMap/Open Targets annotation.
+
+# v3.14 composition-identifiability audit
+
+```{r tme-specs}
+specs <- read_tsv_if("results/tables/tme_adjustment_specifications.tsv")
+knitr::kable(specs)
+```
+
+```{r tme-spec-summary}
+sumtab <- read_tsv_if("results/tables/tme_adjustment_specification_summary.tsv")
+knitr::kable(sumtab, digits = 4)
+```
+
+```{r deconv-cor-audit}
+cora <- read_tsv_if("results/tables/gene_deconvolution_correlation_group_audit.tsv")
+knitr::kable(cora, digits = 4)
+```
+
+```{r transition-id-audit}
+tria <- read_tsv_if("results/tables/transition_program_identifier_summary.tsv")
+knitr::kable(tria, digits = 4)
+```
+
+# TCGA-PAAD / GTEx pancreas validation
+
+```{r tcga-gtex}
+tcga <- read_tsv_if("results/tables/external/tcga_gtex_module_validation.tsv")
+knitr::kable(tcga, digits = 4)
+```
+
+```{r tcga-fig, out.width='100%'}
+fig <- "results/figures/external/tcga_gtex_module_scores.png"
+if (file.exists(fig)) knitr::include_graphics(fig)
+```
+
+```{r tcga-signature-overlap}
+ov <- read_tsv_if("results/tables/external/tcga_gtex_signature_gene_overlap.tsv")
+knitr::kable(ov, digits = 4)
+```
+
+# TCGA survival association
+
+```{r tcga-survival}
+surv <- read_tsv_if("results/tables/external/tcga_survival_results.tsv")
+knitr::kable(surv, digits = 4)
+```
+
+# Single-cell / single-nucleus mapping
+
+```{r scrna-score}
+sc <- read_tsv_if("results/tables/external/scrna_celltype_module_score_summary.tsv")
+celltype_order <- c(
+  "Epithelial (malignant)", "Epithelial (non-malignant)",
+  "Cancer-associated fibroblast", "Myeloid", "Lymphoid",
+  "Endothelial", "Endocrine", "Pericyte",
+  "Vascular smooth muscle", "Schwann", "Adipocyte"
+)
+if (all(c("cell_type", "module") %in% names(sc))) {
+  sc$cell_type <- factor(sc$cell_type, levels = celltype_order)
+  sc <- sc[order(sc$module, is.na(sc$cell_type), sc$cell_type), , drop = FALSE]
+}
+knitr::kable(sc, digits = 4)
+```
+
+```{r scrna-fig, out.width='100%'}
+fig <- "results/figures/external/scrna_module_celltype_heatmap.png"
+if (file.exists(fig)) knitr::include_graphics(fig)
+```
+
+```{r scrna-signature-overlap}
+ov <- read_tsv_if("results/tables/external/scrna_signature_gene_overlap.tsv")
+knitr::kable(ov, digits = 4)
+```
+
+```{r scrna-dot}
+dot <- read_tsv_if("results/tables/external/scrna_hub_gene_dotplot_table.tsv")
+key_groups <- c(
+  "Epithelial (malignant)", "Epithelial (non-malignant)",
+  "Cancer-associated fibroblast", "Myeloid", "Lymphoid",
+  "Endothelial", "Endocrine", "Pericyte"
+)
+key_genes <- c("SLC6A14", "LY75", "FGD6", "COL12A1", "ASAP2", "KIF18A", "RUVBL1", "PRIM2", "CTNNB1", "TUBB")
+if (all(c("group", "gene") %in% names(dot))) {
+  dot$key_group <- dot$group %in% key_groups
+  dot$key_gene <- dot$gene %in% key_genes
+  dot$group <- factor(dot$group, levels = key_groups)
+  dot_show <- dot[order(!dot$key_group, is.na(dot$group), dot$group, !dot$key_gene, dot$gene), , drop = FALSE]
+  dot_show$key_group <- NULL
+  dot_show$key_gene <- NULL
+} else {
+  dot_show <- dot
+}
+knitr::kable(utils::head(dot_show, 120), digits = 4)
+```
+
+```{r scrna-dot-fig, out.width='100%'}
+fig <- "results/figures/external/scrna_hub_gene_dotplot.png"
+if (file.exists(fig)) knitr::include_graphics(fig)
+```
+
+# Deconvolution sensitivity
+
+```{r deconv-effects}
+dec <- read_tsv_if("results/tables/external/deconv_sensitivity_condition_effects.tsv")
+knitr::kable(utils::head(dec, 80), digits = 4)
+```
+
+```{r deconv-fig, out.width='100%'}
+fig <- "results/figures/external/deconv_sensitivity_condition_effects.png"
+if (file.exists(fig)) knitr::include_graphics(fig)
+```
+
+```{r deconv-overlap}
+ov <- read_tsv_if("results/tables/external/deconv_sensitivity_tme_class_overlap.tsv")
+knitr::kable(ov, digits = 4)
+```
+
+# DepMap / Open Targets target prioritization
+
+```{r target-pri}
+tar <- read_tsv_if("results/tables/external/external_target_prioritization.tsv")
+if ("main_text_candidate_score" %in% names(tar)) {
+  tar <- tar[order(-tar$main_text_candidate_score, -tar$external_target_priority_score), , drop = FALSE]
+}
+target_cols <- intersect(c(
+  "gene", "candidate_lane", "main_text_candidate_score", "external_target_priority_score",
+  "tme_class", "tme_class_legacy", "classification_note", "retained_after_tme_adjustment", "meta_logFC", "adjusted_meta_logFC", "adjusted_fdr",
+  "target_class", "tractability_manual", "subcellular_location",
+  "depmap_expression_status", "pancreas_expression_percentile",
+  "depmap_crispr_status", "median_gene_effect_pancreas", "pancreas_dependency_fraction_lt_minus05",
+  "opentargets_status", "pancreas_disease_name", "pancreas_disease_score", "pancreas_known_drug_count"
+), names(tar))
+knitr::kable(utils::head(tar[, target_cols, drop = FALSE], 80), digits = 4)
+```
+
+```{r target-fig, out.width='100%'}
+fig <- "results/figures/external/external_target_prioritization.png"
+if (file.exists(fig)) knitr::include_graphics(fig)
+```
+
+# Output manifest
+
+```{r manifest}
+manifest <- read_tsv_if("results/tables/external/external_validation_output_manifest.tsv")
+knitr::kable(manifest)
+```

@@ -1,0 +1,7 @@
+module	n_external_tested	n_directionally_concordant	n_nominal_significant	min_p	median_logFC	externally_supported	section	n_defined	n_up_defined	n_down_defined	n_available	n_up_available	n_down_available	available_fraction	source_file
+transition_composite_up_minus_down	5.0	5.0	5.0	2.5897339013322197e-11	1.48264375082582	True	cross_microarray_transition_validation_summary								
+transition_down_score	5.0	5.0	5.0	3.973371076151261e-09	-0.832562633542725	True	cross_microarray_transition_validation_summary								
+transition_up_score	5.0	5.0	5.0	6.14987498048642e-13	0.650081117283091	True	cross_microarray_transition_validation_summary								
+transition_up							TCGA_GTEx_transition_gene_overlap	1241.0	1241.0	0.0	1231.0	1231.0	0.0	0.9919	results/tables/program_benign_to_pdac_transition_coding_symbol_proxy.tsv
+transition_down							TCGA_GTEx_transition_gene_overlap	719.0	719.0	0.0	715.0	715.0	0.0	0.9944	results/tables/program_benign_to_pdac_transition_coding_symbol_proxy.tsv
+transition_composite							TCGA_GTEx_transition_gene_overlap	1960.0	1241.0	719.0	1946.0	1231.0	715.0	0.9929	results/tables/program_benign_to_pdac_transition_coding_symbol_proxy.tsv

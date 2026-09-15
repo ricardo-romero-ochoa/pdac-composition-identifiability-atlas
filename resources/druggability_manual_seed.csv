@@ -1,0 +1,18 @@
+gene,target_class,subcellular_location,tractability_manual,known_context,annotation_source
+SLC6A14,solute carrier transporter,plasma membrane,small_molecule_transporter_target,amino-acid transporter; plausible tumor metabolic vulnerability; prioritize orthogonal validation,manual_seed
+LY75,C-type lectin/endocytic receptor,plasma membrane/immune compartment,antibody_or_ligand_target_possible,immune/endocytic receptor signal; likely microenvironment context,manual_seed
+COL12A1,extracellular-matrix collagen,extracellular matrix,extracellular_matrix_target_or_biomarker,desmoplastic matrix program; more useful as stromal marker than tumor-intrinsic target,manual_seed
+AEBP1,extracellular matrix-associated/adipocyte enhancer binding protein,extracellular/pericellular,stromal_marker_low_direct_druggability,CAF/desmoplasia-associated marker; targetability indirect,manual_seed
+TPM4,actin cytoskeleton-associated protein,cytoskeleton,low_direct_druggability,contractile/cytoskeletal stromal program; not a primary drug target,manual_seed
+TRIB2,pseudokinase/adaptor,cytoplasm,possible_protein_interaction_target_but_low_maturity,oncogenic signaling context possible; needs validation,manual_seed
+FGD6,RhoGEF/cytoskeletal regulator,cytoplasm/membrane-associated,low_moderate_direct_druggability,Rho-family pathway context; targetability indirect,manual_seed
+ASAP2,ArfGAP,cytoplasm/membrane-associated,low_moderate_direct_druggability,vesicular trafficking/invasion context; targetability indirect,manual_seed
+SGIP1,endocytic adaptor,membrane/cytoplasmic,low_direct_druggability,endocytosis-associated; biological vetting needed,manual_seed
+SLC44A1,choline transporter-like protein,plasma membrane,small_molecule_transporter_target,metabolite transporter context; plausible druggability if tumor-retained,manual_seed
+FLRT2,cell adhesion/leucine-rich repeat protein,plasma membrane/extracellular,antibody_or_ligand_target_possible,cell adhesion context; possible surface target but needs expression localization,manual_seed
+SRPR,signal recognition particle receptor,ER membrane,low_direct_druggability,secretory pathway; likely essential housekeeping context,manual_seed
+FAP,serine protease/CAF surface protein,plasma membrane/extracellular,known_stromal_target,CAF/desmoplasia target class; useful stromal target/control,manual_seed
+MMP11,matrix metalloproteinase,extracellular matrix,enzyme_target_possible,ECM remodeling; metalloproteinase target class with specificity concerns,manual_seed
+MMP7,matrix metalloproteinase,extracellular/secreted,enzyme_target_possible,ductal/tumor-associated ECM remodeling; specificity concerns,manual_seed
+KRT19,keratin/intermediate filament,cytoskeleton,diagnostic_marker_low_druggability,ductal epithelial marker; biomarker more than target,manual_seed
+EPCAM,epithelial cell adhesion molecule,plasma membrane,antibody_or_cell_therapy_target_possible,epithelial tumor surface marker; not necessarily PDAC-specific,manual_seed

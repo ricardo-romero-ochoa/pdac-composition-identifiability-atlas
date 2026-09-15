@@ -1,0 +1,4 @@
+dataset	sample	title	condition	include	patient_id	technical_group	notes	review_reason
+GSE71989	GSM1849348	JJ-34, human Chronic Pancreatitis tissue		False		GSE71989__GSM1849348__NA		missing_condition
+GSE91035	GSM2420007	L34, human CP tissue	cp	False		GSE91035__GSM2420007__cp	Confirmed chronic pancreatitis sample in GEO; excluded from primary tumor/control and normal-benign-PDAC transition analyses.	excluded_by_rule_or_override
+GSE91035	GSM2420010	L37, human CP tissue	cp	False		GSE91035__GSM2420010__cp	Confirmed chronic pancreatitis sample in GEO; excluded from primary tumor/control and normal-benign-PDAC transition analyses.	excluded_by_rule_or_override

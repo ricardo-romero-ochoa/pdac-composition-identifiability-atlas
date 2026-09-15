@@ -1,0 +1,9 @@
+pair	gene_a	gene_b	coefficient	gene_a_available	gene_b_available	pair_available	expression_source
+1	GPR87	REG4	1.994	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset
+2	KRT6A	ANXA10	2.031	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset
+3	BCAR3	GATA6	1.618	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset
+4	PTGES	CLDN18	0.922	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset
+5	ITGA3	LGALS4	1.059	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset
+6	C16ORF74	DDC	0.929	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset
+7	S100A2	SLC40A1	2.505	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset
+8	KRT5	CLRN3	0.485	TRUE	TRUE	TRUE	dedicated_16_gene_xena_subset

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived release and the associated article."
+title: "Composition identifiability in public PDAC transcriptomics: reproducible analysis code and frozen results"
+type: software
+version: 1.0.0
+date-released: 2026-09-14
+authors:
+  - family-names: Romero
+    given-names: Ricardo
+    affiliation: "Universidad Autónoma Metropolitana, Unidad Cuajimalpa"
+license: MIT
+keywords:
+  - pancreatic ductal adenocarcinoma
+  - PDAC
+  - transcriptomics
+  - meta-analysis
+  - tumor microenvironment
+  - composition identifiability
+  - reproducible bioinformatics
+  - CIBERSORTx
+  - PurIST

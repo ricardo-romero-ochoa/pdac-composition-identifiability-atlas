@@ -1,0 +1,7 @@
+condition_group	score	n_gene_score_correlations	median_abs_rho
+control	immune_pan	125877	0.376470588235294
+control	stromal_caf	125877	0.357142857142857
+pooled	immune_pan	125879	0.302551646826456
+pooled	stromal_caf	125879	0.336516817801788
+tumor	immune_pan	125879	0.181724581724582
+tumor	stromal_caf	125879	0.197425997425997

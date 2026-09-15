@@ -1,0 +1,239 @@
+project:
+  name: pdac_transcriptomic_atlas
+  organism: Homo sapiens
+  output_dir: results
+  data_dir: data
+  random_seed: 20260531
+
+analysis:
+  use_processed_geo: true
+  log2_if_needed: true
+  normalize_between_arrays: true
+  collapse_probe_strategy: mean
+  min_genes_per_dataset: 6000
+  min_samples_for_wgcna: 40
+  top_variable_genes_for_wgcna: 6000
+  wgcna_power: 6
+  wgcna_min_module_size: 30
+  wgcna_merge_cut_height: 0.25
+  meta_method: REML
+  top_n_rank_overlap: [100, 250, 500, 1000]
+  core_signature:
+    fdr: 0.05
+    abs_logfc: 0.58
+    max_i2: 60
+    min_direction_concordance: 0.75
+    min_lodo_direction_concordance: 0.75
+  microenvironment_program:
+    stromal_attenuation_min: 0.35
+    abs_stroma_cor_min: 0.35
+    abs_immune_cor_min: 0.35
+  transition_program:
+    fdr: 0.05
+    abs_logfc_pdac_vs_benign: 0.40
+  metadata_audit:
+    fail_on_mismatch: false
+  signature_tiers:
+    tier1:
+      min_k: 5
+      fdr: 0.05
+      abs_logfc: 0.40
+      max_i2: 75
+      min_direction_concordance: 1.0
+      min_lodo_direction_concordance: 1.0
+      max_lodo_proxy_p: 0.10
+    tier2:
+      min_k: 3
+      fdr: 0.05
+      abs_logfc: 0.40
+      min_direction_concordance: 1.0
+  tme_adjustment:
+    # v3.14 primary specification excludes epithelial/acinar disease-state proxies.
+    # S4 is retained only as an over-adjusted negative-control specification.
+    primary_spec: S1
+  gene_deconv_correlation:
+    # Use within-tumor correlations for classification to avoid pooled tumor/control
+    # separation masquerading as stromal/immune covariation.
+    classification_group: tumor
+    min_samples_per_group: 6
+  tme_classification:
+    unadjusted_fdr: 0.05
+    retained_adjusted_fdr: 0.05
+    tumor_intrinsic_max_attenuation: 0.75
+    microenvironment_min_attenuation: 0.75
+    microenvironment_min_abs_cor: 0.35
+  transition_validation:
+    min_external_concordant: 4
+  hub_prioritization:
+    main_text_min_k: 5
+    main_text_fdr: 0.05
+    annotation_top_n: 500
+    penalty_k_3_4: 0.75
+    penalty_k_lt3: 2.0
+    penalty_no_tme_retention: 0.5
+  optional_online_annotations: false
+
+validation:
+  tcga_gtex:
+    enabled: true
+    source: xena_toil
+    download: false
+    force_download: false
+    skip_if_missing: true
+    expression_file: data/external/tcga_gtex/tcga_paad_gtex_pancreas_expression.tsv.gz
+    metadata_file: data/external/tcga_gtex/tcga_paad_gtex_pancreas_metadata.tsv
+    survival_file: data/external/tcga_gtex/tcga_paad_survival.tsv
+    xena_expression_url: https://toil-xena-hub.s3.us-east-1.amazonaws.com/download/TcgaTargetGtex_rsem_gene_tpm.gz
+    xena_phenotype_url: https://toil-xena-hub.s3.us-east-1.amazonaws.com/download/TcgaTargetGTEX_phenotype.txt.gz
+    xena_expression_file: data/external/tcga_gtex/TcgaTargetGtex_rsem_gene_tpm.gz
+    xena_phenotype_file: data/external/tcga_gtex/TcgaTargetGTEX_phenotype.txt.gz
+    memory_safe_xena: true
+    # Do not attempt to stream the full UCSC Xena matrix inside targets by default.
+    # Run scripts/prepare_tcga_gtex_subset.R first to create the small local subset.
+    allow_in_pipeline_xena: false
+    max_xena_samples: 1000
+    xena_probemap_url: https://toil.xenahubs.net/download/probeMap/gencode.v23.annotation.gene.probemap
+    xena_probemap_file: data/external/tcga_gtex/gencode.v23.annotation.gene.probemap
+    requested_gene_file: data/external/cache/tcga_gtex_requested_genes.txt
+  scrna:
+    enabled: true
+    skip_if_missing: true
+    object_file: data/external/scrna/scrna_reference.rds
+    h5ad_file: data/external/scrna/scrna_reference.h5ad
+    prefer_tables: true
+    python: null
+    expression_file: data/external/scrna/scrna_expression.tsv.gz
+    metadata_file: data/external/scrna/scrna_metadata.tsv
+    cell_type_column:
+      - "Level 1 Annotation"
+      - "new_celltypes"
+      - "celltype_infercnv"
+      - "broad_celltypes"
+      - "cell_type"
+    condition_column:
+      - "condition"
+      - "treatment_status"
+      - "new_treatment"
+    sample_column:
+      - "sample_id"
+      - "sampleid"
+      - "pid"
+    fail_if_unknown_celltype: true
+    assay: logcounts
+    slot: data
+    max_cells_per_celltype: 2000
+    min_genes_per_signature: 3
+    top_hub_genes: 40
+  deconv_sensitivity:
+    enabled: true
+    min_marker_genes: 3
+    max_genes_for_correlation: 6000
+
+  pancancer_specificity:
+    enabled: true
+    expression_file: data/external/pancancer/pancancer_expression.tsv.gz
+    metadata_file: data/external/pancancer/pancancer_metadata.tsv
+    sample_column: sample
+    cancer_type_column: cancer_type
+    class_column: class
+    tumor_label: tumor
+    normal_label: gtex_normal
+    min_tumor: 20
+    min_normal: 20
+  targets:
+    enabled: true
+    top_n_candidates: 120
+    query_opentargets: true
+    opentargets_disease_id: null
+    opentargets_sleep_sec: 0.2
+    opentargets_timeout_sec: 30
+    depmap_expression_file: data/external/depmap/OmicsExpressionProteinCodingGenesTPMLogp1.csv
+    depmap_crispr_gene_effect_file: data/external/depmap/CRISPRGeneEffect.csv
+    depmap_sample_info_file: data/external/depmap/Model.csv
+
+datasets:
+  GSE15471:
+    expected_counts:
+      control: 39
+      tumor: 39
+    title: Paired PDAC tumor-normal with technical replicates
+    platform_preference: GPL570
+    primary_contrast: tumor_vs_control
+    paired_design: true
+    technical_replicates: true
+    condition_regex:
+      tumor: '(tumou?r|cancer|pdac|ductal adenocarcinoma)'
+      control: '(normal|non[- ]?tumou?r|adjacent)'
+    patient_regex: '(patient|case|panc|pt|sample)[_ -]*0*([0-9]+)'
+  GSE28735:
+    expected_counts:
+      control: 45
+      tumor: 45
+    title: Matched tumor-adjacent non-tumor PDAC pairs
+    platform_preference: GPL6244
+    primary_contrast: tumor_vs_control
+    paired_design: true
+    technical_replicates: false
+    condition_regex:
+      tumor: '(tumou?r|pdac|cancer)'
+      control: '(adjacent|non[- ]?tumou?r|normal)'
+    patient_regex: '(patient|case|pt|sample)[_ -]*0*([0-9]+)'
+  GSE62165:
+    expected_counts:
+      control: 13
+      tumor: 118
+    title: PDAC plus control; subtype/prognosis relevance
+    platform_preference: GPL13667
+    primary_contrast: tumor_vs_control
+    paired_design: false
+    technical_replicates: false
+    condition_regex:
+      tumor: '(pdac|tumou?r|ductal adenocarcinoma|cancer)'
+      control: '(control|normal|non[- ]?tumou?r)'
+    patient_regex: '(patient|case|pt|sample)[_ -]*0*([0-9]+)'
+  GSE16515:
+    expected_counts:
+      control: 16
+      tumor: 36
+    title: Mayo pancreatic tumor and normal samples; partly paired
+    platform_preference: GPL570
+    primary_contrast: tumor_vs_control
+    paired_design: mixed
+    technical_replicates: false
+    condition_regex:
+      tumor: '(tumou?r|pdac|cancer)'
+      control: '(normal|non[- ]?tumou?r|adjacent)'
+    patient_regex: '(patient|case|pt|sample)[_ -]*0*([0-9]+)'
+  GSE71989:
+    expected_counts:
+      control: 8
+      tumor: 13
+      cp: 1
+    title: Normal pancreatic and PDAC tissues
+    platform_preference: GPL570
+    primary_contrast: tumor_vs_control
+    paired_design: false
+    technical_replicates: false
+    condition_regex:
+      tumor: '(pdac|tumou?r|cancer)'
+      cp: '(chronic pancreatitis|(^|[^A-Za-z0-9_])cp([^A-Za-z0-9_]|$))'
+      control: '(normal|control)'
+    patient_regex: '(patient|case|pt|sample)[_ -]*0*([0-9]+)'
+  GSE91035:
+    expected_counts:
+      control: 8
+      benign: 15
+      tumor: 25
+      cp: 2
+    title: Normal-benign-PDAC Agilent GPL22763 lncRNA-focused expression design
+    platform_preference: GPL22763
+    primary_contrast: pdac_vs_normal
+    paired_design: false
+    technical_replicates: false
+    transition_design: true
+    condition_regex:
+      tumor: '(pdac|pancreatic ductal adenocarcinoma|tumou?r|cancer)'
+      benign: '(benign|adjacent benign)'
+      cp: '(chronic pancreatitis|(^|[^A-Za-z0-9_])cp([^A-Za-z0-9_]|$))'
+      control: '(normal)'
+    patient_regex: '(patient|case|pt|sample)[_ -]*0*([0-9]+)'

@@ -1,0 +1,13 @@
+study_id	list_name	prior_genes	overlap_genes	fraction_prior_recovered	fraction_tier1_explained	jaccard	overlapping_gene_list
+YE_FRONTIMMUNOL_2021	validated_4_gene_panel	4	1	0.25	0.00122850122850123	0.00122399020807834	CTSE
+LI_CANCERCOMM_2018	survival_associated_pathway_genes	5	1	0.2	0.00122850122850123	0.00122249388753056	RALA
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	10	1	0.1	0.00122850122850123	0.00121506682867558	GABRP
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	10	1	0.1	0.00122850122850123	0.00121506682867558	PDK4
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_5_gene_classifier	5	0	0	0	0	""
+FRONTPHARMACOL_2024_ML_QPCR	ML_qPCR_5_gene_signature	5	0	0	0	0	""
+LU_GENES_2019	top_5_hub_genes	5	0	0	0	0	""
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	10	0	0	0	0	""
+MA_ONCOL_LETT_2019	prognostic_5_gene_signature	5	0	0	0	0	""
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	19	0	0	0	0	""
+ZHOU_MOLMED_2019	diagnostic_4_gene_model	4	0	0	0	0	""
+ZHOU_MOLMED_2019	prognostic_4_gene_model	4	0	0	0	0	""

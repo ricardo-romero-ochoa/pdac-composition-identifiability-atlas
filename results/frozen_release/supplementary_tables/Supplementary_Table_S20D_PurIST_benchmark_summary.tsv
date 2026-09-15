@@ -1,0 +1,2 @@
+method	expression_input_source	expression_input_file	n_tcga_paad_tumors	n_basal_like	n_classical	fraction_basal_like	n_modules_benchmarked	min_fdr	max_absolute_auc
+PurIST published 8-TSP single-sample classifier	dedicated_16_gene_xena_subset	data/external/tcga_gtex/purist_tcga_paad_expression.tsv.gz	178	38	140	0.213483146067416	6	0.000172246891232654	0.721616541353384

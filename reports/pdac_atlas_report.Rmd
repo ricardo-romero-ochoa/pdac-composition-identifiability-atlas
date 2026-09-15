@@ -1,0 +1,155 @@
+---
+title: "Cross-cohort PDAC transcriptomic atlas"
+author: "Analysis pipeline"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  root.dir = normalizePath(getwd(), winslash = "/", mustWork = TRUE)
+)
+library(tidyverse)
+read_tsv_safe <- function(path) {
+  if (file.exists(path)) readr::read_tsv(path, show_col_types = FALSE) else tibble(note = paste("Missing file:", path))
+}
+show_head <- function(path, n = 30) {
+  x <- read_tsv_safe(path)
+  knitr::kable(head(x, n))
+}
+```
+
+# Dataset and metadata audit
+
+Manual GEO audit confirms that `GSE71989` contains 13 PDAC/tumor samples and 8 control samples. For `GSE91035`, the confirmed labels are 25 tumor/PDAC, 8 control, 15 benign, and two chronic-pancreatitis samples (`GSM2420007`, `GSM2420010`). CP samples are retained in the metadata audit as `cp` but are excluded by default from the primary tumor/control and normal-benign-PDAC transition analyses.
+
+## Dataset sample summary
+
+```{r}
+show_head("results/tables/dataset_sample_summary.tsv", 100)
+```
+
+## Expected versus observed biological labels
+
+```{r}
+show_head("results/tables/metadata_expected_vs_observed.tsv", 100)
+```
+
+## Samples requiring manual review
+
+```{r}
+show_head("results/tables/metadata_samples_requiring_review.tsv", 100)
+```
+
+# Original atlas programs
+
+## Core PDAC tumor-associated program
+
+```{r}
+show_head("results/tables/program_core_tumor_signature.tsv", 30)
+```
+
+## Microenvironment-sensitive program
+
+```{r}
+show_head("results/tables/program_microenvironment_signature.tsv", 30)
+```
+
+## Normal-benign-PDAC transition program
+
+```{r}
+show_head("results/tables/program_benign_to_pdac_transition.tsv", 30)
+```
+
+# Manuscript-reinforced programs
+
+## Reinforcement summary
+
+```{r}
+show_head("results/tables/reinforcement_summary.tsv", 50)
+```
+
+## Tiered cross-cohort signature
+
+Main-text core claims should rely on Tier 1 genes. Tier 2 and platform-limited genes are retained for supplementary or hypothesis-generating analyses.
+
+```{r}
+show_head("results/tables/tiered_core_signature.tsv", 40)
+```
+
+## Tier 1 main-text core signature
+
+```{r}
+show_head("results/tables/program_tier1_core_signature.tsv", 40)
+```
+
+## TME adjustment specification grid
+
+```{r}
+show_head("results/tables/tme_adjustment_specification_summary.tsv", 20)
+```
+
+## Tumor-associated retained under S1 stromal/immune-only adjustment
+
+```{r}
+show_head("results/tables/program_tumor_intrinsic_retained_signature.tsv", 40)
+```
+
+## Composition-covarying signature
+
+```{r}
+show_head("results/tables/program_composition_covarying_signature.tsv", 40)
+```
+
+## Transition module external validation
+
+```{r}
+show_head("results/tables/transition_module_external_validation_summary.tsv", 20)
+```
+
+```{r}
+show_head("results/tables/transition_module_external_validation.tsv", 100)
+```
+
+# Hub prioritization
+
+## Original integrated hub table
+
+```{r}
+show_head("results/tables/integrative_hub_gene_prioritization.tsv", 40)
+```
+
+## Strict hub prioritization for manuscript triage
+
+```{r}
+show_head("results/tables/integrative_hub_gene_prioritization_strict.tsv", 50)
+```
+
+## Main-text hub candidates
+
+```{r}
+show_head("results/tables/main_text_hub_candidates.tsv", 50)
+```
+
+## Druggability annotation
+
+```{r}
+show_head("results/tables/druggability_annotation.tsv", 80)
+```
+
+# Key figures
+
+```{r, results='asis'}
+figs <- list.files("results/figures", pattern = "\\.png$", full.names = TRUE)
+for (f in figs) {
+  cat("\n\n## ", basename(f), "\n\n", sep = "")
+  cat("![](", normalizePath(f, winslash = "/", mustWork = FALSE), ")\n\n", sep = "")
+}
+```

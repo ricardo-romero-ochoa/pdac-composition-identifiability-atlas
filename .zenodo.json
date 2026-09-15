@@ -1,0 +1,26 @@
+{
+  "title": "Composition identifiability in public PDAC transcriptomics: reproducible analysis code and frozen results",
+  "upload_type": "software",
+  "description": "Reproducible six-cohort PDAC transcriptomic atlas and frozen validation outputs, including composition-sensitivity analysis, TCGA/GTEx validation, single-cell mapping, pan-cancer specificity testing, PurIST subtyping and CIBERSORTx reference-based deconvolution.",
+  "creators": [
+    {
+      "name": "Romero, Ricardo",
+      "affiliation": "Universidad Aut\u00f3noma Metropolitana, Unidad Cuajimalpa"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "PDAC",
+    "pancreatic ductal adenocarcinoma",
+    "transcriptomics",
+    "meta-analysis",
+    "tumor microenvironment",
+    "composition identifiability",
+    "CIBERSORTx",
+    "PurIST",
+    "reproducible bioinformatics"
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-09-14",
+  "access_right": "open"
+}

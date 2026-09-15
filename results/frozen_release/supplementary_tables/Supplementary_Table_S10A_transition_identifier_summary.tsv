@@ -1,0 +1,4 @@
+transition_external_validation_tier	n_genes	fraction
+coding_symbol_proxy	1960	0.754716981132076
+noncoding_or_legacy_symbol_like	377	0.145167500962649
+unresolved_symbol	260	0.100115517905275

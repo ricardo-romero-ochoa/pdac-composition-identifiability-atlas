@@ -1,0 +1,87 @@
+study_id	list_name	gene	direction	reported_role	evidence_type	n_genes_reported_list	curatorial_note
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_5_gene_classifier	TMPRSS4	up_in_PDAC	diagnostic_classifier	reported_classifier	5	Subset of 10-gene classifier; genes reported as overexpressed in PDAC.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_5_gene_classifier	ECT2	up_in_PDAC	diagnostic_classifier	reported_classifier	5	Subset of 10-gene classifier; genes reported as overexpressed in PDAC.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_5_gene_classifier	SERPINB5	up_in_PDAC	diagnostic_classifier	reported_classifier	5	Subset of 10-gene classifier; genes reported as overexpressed in PDAC.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_5_gene_classifier	AHNAK2	up_in_PDAC	diagnostic_classifier	reported_classifier	5	Subset of 10-gene classifier; genes reported as overexpressed in PDAC.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_5_gene_classifier	POSTN	up_in_PDAC	diagnostic_classifier	reported_classifier	5	Subset of 10-gene classifier; genes reported as overexpressed in PDAC.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	TMPRSS4	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	ECT2	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	SERPINB5	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	AHNAK2	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	POSTN	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	S100P	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	CEACAM5	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	GABRP	up_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	CELA2B	down_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+BHASIN_KLETT_ONCOTARGET_2016	PDAC_10_gene_classifier	CUZD1	down_in_PDAC	diagnostic_classifier_extended	reported_classifier	10	10-gene classifier reported by Oncotarget source; direction follows text summary.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	SYCN	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	PNLIPRP1	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	CAP2	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	GNMT	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	MAT1A	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	ABAT	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	GPT2	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	ADHFE1	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	PHGDH	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	PSAT1	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	ERP27	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	PDIA2	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	MT1H	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	COMP	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	COL5A2	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	FN1	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	COL1A2	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	FAP	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_19_gene_module	POSTN	model_component	diagnostic_signature	reported_signature	19	Integrated diagnostic module.
+ZHOU_MOLMED_2019	diagnostic_4_gene_model	MAT1A	coef_positive_0.3034	diagnostic_model	reported_model	4	Four-gene diagnostic model coefficient sign; sign is model coefficient, not necessarily expression direction.
+ZHOU_MOLMED_2019	diagnostic_4_gene_model	MT1H	coef_negative_-0.1526	diagnostic_model	reported_model	4	Four-gene diagnostic model coefficient sign; sign is model coefficient, not necessarily expression direction.
+ZHOU_MOLMED_2019	diagnostic_4_gene_model	FN1	coef_positive_0.4645	diagnostic_model	reported_model	4	Four-gene diagnostic model coefficient sign; sign is model coefficient, not necessarily expression direction.
+ZHOU_MOLMED_2019	diagnostic_4_gene_model	FAP	coef_negative_-0.2244	diagnostic_model	reported_model	4	Four-gene diagnostic model coefficient sign; sign is model coefficient, not necessarily expression direction.
+ZHOU_MOLMED_2019	prognostic_4_gene_model	CEL	coef_negative_-1.400	prognostic_model	reported_model	4	Four-gene prognostic model coefficient sign; sign is model coefficient.
+ZHOU_MOLMED_2019	prognostic_4_gene_model	CPA1	coef_positive_1.321	prognostic_model	reported_model	4	Four-gene prognostic model coefficient sign; sign is model coefficient.
+ZHOU_MOLMED_2019	prognostic_4_gene_model	POSTN	coef_positive_0.454	prognostic_model	reported_model	4	Four-gene prognostic model coefficient sign; sign is model coefficient.
+ZHOU_MOLMED_2019	prognostic_4_gene_model	PM20D1	coef_positive_1.011	prognostic_model	reported_model	4	Four-gene prognostic model coefficient sign; sign is model coefficient.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	ALB	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	EGF	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	MMP9	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	EGFR	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	FN1	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	MMP1	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	SERPINE1	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	TIMP1	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	PLAU	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	PPI_top_10_hub_genes	PLAUR	hub_high_degree	PPI_hub_pathogenesis	reported_hub	10	Top PPI hub genes in multi-platform meta-analysis.
+MA_ONCOL_LETT_2019	prognostic_5_gene_signature	LAMC2	model_component	prognostic_signature	reported_signature	5	Prognostic signature genes reported by study.
+MA_ONCOL_LETT_2019	prognostic_5_gene_signature	LAMB3	model_component	prognostic_signature	reported_signature	5	Prognostic signature genes reported by study.
+MA_ONCOL_LETT_2019	prognostic_5_gene_signature	SERPINB5	model_component	prognostic_signature	reported_signature	5	Prognostic signature genes reported by study.
+MA_ONCOL_LETT_2019	prognostic_5_gene_signature	AREG	model_component	prognostic_signature	reported_signature	5	Prognostic signature genes reported by study.
+MA_ONCOL_LETT_2019	prognostic_5_gene_signature	SFRP4	model_component	prognostic_signature	reported_signature	5	Prognostic signature genes reported by study.
+YE_FRONTIMMUNOL_2021	validated_4_gene_panel	TSPAN1	up_in_pancreatic_cancer	diagnostic_hub_panel_with_experimental_validation	reported_validated_panel	4	Panel validated with experiments according to study abstract/full text.
+YE_FRONTIMMUNOL_2021	validated_4_gene_panel	TMPRSS4	up_in_pancreatic_cancer	diagnostic_hub_panel_with_experimental_validation	reported_validated_panel	4	Panel validated with experiments according to study abstract/full text.
+YE_FRONTIMMUNOL_2021	validated_4_gene_panel	SDR16C5	up_in_pancreatic_cancer	diagnostic_hub_panel_with_experimental_validation	reported_validated_panel	4	Panel validated with experiments according to study abstract/full text.
+YE_FRONTIMMUNOL_2021	validated_4_gene_panel	CTSE	up_in_pancreatic_cancer	diagnostic_hub_panel_with_experimental_validation	reported_validated_panel	4	Panel validated with experiments according to study abstract/full text.
+LI_CANCERCOMM_2018	survival_associated_pathway_genes	BIRC5	associated_with_survival	survival_associated_pathway_genes	reported_survival_associated	5	Genes significantly associated with survival in TCGA/ICGC according to study.
+LI_CANCERCOMM_2018	survival_associated_pathway_genes	CKS2	associated_with_survival	survival_associated_pathway_genes	reported_survival_associated	5	Genes significantly associated with survival in TCGA/ICGC according to study.
+LI_CANCERCOMM_2018	survival_associated_pathway_genes	ITGA3	associated_with_survival	survival_associated_pathway_genes	reported_survival_associated	5	Genes significantly associated with survival in TCGA/ICGC according to study.
+LI_CANCERCOMM_2018	survival_associated_pathway_genes	ITGA6	associated_with_survival	survival_associated_pathway_genes	reported_survival_associated	5	Genes significantly associated with survival in TCGA/ICGC according to study.
+LI_CANCERCOMM_2018	survival_associated_pathway_genes	RALA	associated_with_survival	survival_associated_pathway_genes	reported_survival_associated	5	Genes significantly associated with survival in TCGA/ICGC according to study.
+LU_GENES_2019	top_5_hub_genes	MELK	upregulated_hub	PPI_hub_prognostic_candidates	reported_hub	5	Top upregulated hub genes from PPI/cytoHubba analysis.
+LU_GENES_2019	top_5_hub_genes	MET	upregulated_hub	PPI_hub_prognostic_candidates	reported_hub	5	Top upregulated hub genes from PPI/cytoHubba analysis.
+LU_GENES_2019	top_5_hub_genes	SDC1	upregulated_hub	PPI_hub_prognostic_candidates	reported_hub	5	Top upregulated hub genes from PPI/cytoHubba analysis.
+LU_GENES_2019	top_5_hub_genes	THBS1	upregulated_hub	PPI_hub_prognostic_candidates	reported_hub	5	Top upregulated hub genes from PPI/cytoHubba analysis.
+LU_GENES_2019	top_5_hub_genes	TOP2A	upregulated_hub	PPI_hub_prognostic_candidates	reported_hub	5	Top upregulated hub genes from PPI/cytoHubba analysis.
+FRONTPHARMACOL_2024_ML_QPCR	ML_qPCR_5_gene_signature	LAMC2	model_component	diagnostic_signature_qPCR_validated	reported_signature	5	Random-effects/ML signature; qPCR validation in peripheral blood samples.
+FRONTPHARMACOL_2024_ML_QPCR	ML_qPCR_5_gene_signature	TSPAN1	model_component	diagnostic_signature_qPCR_validated	reported_signature	5	Random-effects/ML signature; qPCR validation in peripheral blood samples.
+FRONTPHARMACOL_2024_ML_QPCR	ML_qPCR_5_gene_signature	MYO1E	model_component	diagnostic_signature_qPCR_validated	reported_signature	5	Random-effects/ML signature; qPCR validation in peripheral blood samples.
+FRONTPHARMACOL_2024_ML_QPCR	ML_qPCR_5_gene_signature	MYOF	model_component	diagnostic_signature_qPCR_validated	reported_signature	5	Random-effects/ML signature; qPCR validation in peripheral blood samples.
+FRONTPHARMACOL_2024_ML_QPCR	ML_qPCR_5_gene_signature	SULF1	model_component	diagnostic_signature_qPCR_validated	reported_signature	5	Random-effects/ML signature; qPCR validation in peripheral blood samples.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	CFTR	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	SLC7A2	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	CCL18	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	PDK4	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	BAIAP2L1	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	ITGA3	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	CPA1	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	GPRC5A	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	STYK1	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.
+TANG_ONCOLLETT_2019_GSE28735	single_dataset_PPI_top_10_hub_genes	ST6GALNAC1	hub_high_degree	single_dataset_PPI_hub	reported_hub_single_dataset	10	Single-dataset GSE28735 comparator; not a multi-cohort meta-analysis.

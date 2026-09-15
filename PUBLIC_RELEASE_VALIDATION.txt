@@ -1,0 +1,7 @@
+Public repository validation
+============================
+Files: 189
+Frozen supplementary tables: 42
+Main figures: 10
+Supplementary figures: 31
+Flagged non-public strings: 0

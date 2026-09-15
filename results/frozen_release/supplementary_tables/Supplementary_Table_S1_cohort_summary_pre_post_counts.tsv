@@ -1,0 +1,7 @@
+dataset	platform	n_genes	n_benign_pre	n_control_pre	n_tumor_pre	n_cp_pre	n_tumor_modelled_post_averaging	n_control_modelled_post_averaging	note
+GSE15471	GPL570	21753	0.0	39.0	39.0	0	36	36	Pre counts from dataset_sample_summary; post counts from modelled tumor_vs_control contrasts after technical replicate averaging where applicable.
+GSE16515	GPL570	21753	0.0	16.0	36.0	0	36	16	Pre counts from dataset_sample_summary; post counts from modelled tumor_vs_control contrasts after technical replicate averaging where applicable.
+GSE28735	GPL6244	19963	0.0	45.0	45.0	0	45	45	Pre counts from dataset_sample_summary; post counts from modelled tumor_vs_control contrasts after technical replicate averaging where applicable.
+GSE62165	GPL13667	19468	0.0	13.0	118.0	0	118	13	Pre counts from dataset_sample_summary; post counts from modelled tumor_vs_control contrasts after technical replicate averaging where applicable.
+GSE71989	GPL570	21753	0.0	8.0	13.0	0	13	8	Pre counts from dataset_sample_summary; post counts from modelled tumor_vs_control contrasts after technical replicate averaging where applicable.
+GSE91035	GPL22763	21189	15.0	8.0	25.0	0	25	8	Pre counts from dataset_sample_summary; post counts from modelled tumor_vs_control contrasts after technical replicate averaging where applicable.

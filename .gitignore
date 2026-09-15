@@ -1,0 +1,41 @@
+# R
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+renv/library/
+renv/staging/
+
+# Targets/cache
+_targets/
+_targets_external/
+data/raw/
+data/cache/
+data/external/
+results/logs/
+results/reports/
+results/tables/
+results/figures/
+results/submission/
+results/external_deconvolution_inputs/
+
+# Keep the frozen public release outputs
+!results/frozen_release/
+!results/frozen_release/**
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Credentials
+.env
+*.token
+*credentials*

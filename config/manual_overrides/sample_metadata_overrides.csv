@@ -1,0 +1,3 @@
+dataset,sample,condition,patient_id,technical_group,include,notes
+GSE91035,GSM2420007,cp,,,FALSE,Confirmed chronic pancreatitis sample in GEO; excluded from primary tumor/control and normal-benign-PDAC transition analyses.
+GSE91035,GSM2420010,cp,,,FALSE,Confirmed chronic pancreatitis sample in GEO; excluded from primary tumor/control and normal-benign-PDAC transition analyses.
