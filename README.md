@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1370684878.svg)](https://doi.org/10.5281/zenodo.22759989)
+
 # Composition identifiability in public PDAC transcriptomics
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
